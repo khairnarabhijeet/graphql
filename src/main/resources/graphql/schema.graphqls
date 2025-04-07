@@ -1,1 +1,16 @@
+type Book {
+  id: ID!
+  title: String
+  author: String
+  price: Float
+}
+
+type Query {
+  getBookById(id: ID!): Book
+  allBooks: [Book]
+}
+
+type Mutation {
+  addBook(title: String!, author: String!, price: Float!): Book
+}
 
